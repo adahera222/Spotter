@@ -1,0 +1,20 @@
+<Root Type="WallsFile">
+  <Default>
+    <Wall>
+      <Pos X="0" Y="0" Z="1" />
+      <WD Length="5" Height="5" LOffset="0" ROffset="0" />
+    </Wall>
+    <Wall>
+      <Pos X="16.29112" Y="0" Z="1" />
+      <WD Length="5" Height="5" LOffset="0" ROffset="0" />
+    </Wall>
+  </Default>
+  <East>
+    <Wall>
+      <Pos X="0" Y="11.64679" Z="1" />
+      <WD Length="5" Height="5" LOffset="0" ROffset="0" />
+    </Wall>
+  </East>
+  <West />
+  <South />
+</Root>

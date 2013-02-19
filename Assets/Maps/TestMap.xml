@@ -1,0 +1,34 @@
+<Root Type="MapFile">
+  <Origin X="0" Y="0" Z="1" />
+  <Size Size="2" />
+  <Cell X="-3" Y="-7" Z="1" />
+  <Cell X="-3" Y="-5" Z="1" />
+  <Cell X="-3" Y="-3" Z="1" />
+  <Cell X="-3" Y="-1" Z="1" />
+  <Cell X="-3" Y="1" Z="1" />
+  <Cell X="-3" Y="3" Z="1" />
+  <Cell X="-1" Y="-7" Z="1" />
+  <Cell X="-1" Y="-5" Z="1" />
+  <Cell X="-1" Y="-3" Z="1" />
+  <Cell X="-1" Y="-1" Z="1" />
+  <Cell X="-1" Y="1" Z="1" />
+  <Cell X="-1" Y="3" Z="1" />
+  <Cell X="-1" Y="5" Z="1" />
+  <Cell X="1" Y="-7" Z="1" />
+  <Cell X="1" Y="-5" Z="1" />
+  <Cell X="1" Y="-3" Z="1" />
+  <Cell X="1" Y="-1" Z="1" />
+  <Cell X="1" Y="1" Z="1" />
+  <Cell X="1" Y="3" Z="1" />
+  <Cell X="1" Y="5" Z="1" />
+  <Cell X="1" Y="7" Z="1" />
+  <Cell X="3" Y="-7" Z="1" />
+  <Cell X="3" Y="-5" Z="1" />
+  <Cell X="3" Y="-3" Z="1" />
+  <Cell X="3" Y="-1" Z="1" />
+  <Cell X="3" Y="1" Z="1" />
+  <Cell X="3" Y="3" Z="1" />
+  <Cell X="3" Y="5" Z="1" />
+  <Cell X="3" Y="7" Z="1" />
+  <Cell X="3" Y="9" Z="1" />
+</Root>
