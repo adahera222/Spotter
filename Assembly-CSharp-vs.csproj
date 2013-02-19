@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\GridData.cs" />
      <Compile Include="Assets\Scripts\GridManager.cs" />
      <Compile Include="Assets\Scripts\IsoWall.cs" />
+     <Compile Include="Assets\Scripts\Sprite.cs" />
      <Compile Include="Assets\Scripts\WallsBuilder.cs" />
      <None Include="Assets\Maps\SimpleMap.xml" />
      <None Include="Assets\Maps\SimpleWalls.xml" />
