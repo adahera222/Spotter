@@ -1,0 +1,58 @@
+<Root Type="WallsFile">
+  <Default>
+    <Wall>
+      <Pos X="-6.897041" Y="23.83989" Z="1" />
+      <WD Length="17" Height="15" LOffset="0" ROffset="-17" />
+    </Wall>
+    <Wall>
+      <Pos X="10.12062" Y="6.841955" Z="1" />
+      <WD Length="11" Height="15" LOffset="0" ROffset="11" />
+    </Wall>
+    <Wall>
+      <Pos X="21.1416" Y="17.82317" Z="1" />
+      <WD Length="14.2" Height="15" LOffset="0" ROffset="-13.5" />
+    </Wall>
+    <Wall>
+      <Pos X="-29.42695" Y="1.264133" Z="1" />
+      <WD Length="22.5" Height="15" LOffset="0" ROffset="22.5" />
+    </Wall>
+  </Default>
+  <East>
+    <Wall>
+      <Pos X="-29.66998" Y="-1.326309" Z="1" />
+      <WD Length="31" Height="15" LOffset="0" ROffset="31" />
+    </Wall>
+    <Wall>
+      <Pos X="1.32312" Y="29.665" Z="1" />
+      <WD Length="23" Height="15" LOffset="0" ROffset="-23" />
+    </Wall>
+    <Wall>
+      <Pos X="6.419897" Y="-13.32818" Z="1" />
+      <WD Length="12" Height="15" LOffset="4" ROffset="-8" />
+    </Wall>
+  </East>
+  <West>
+    <Wall>
+      <Pos X="-4.209964" Y="35.40322" Z="1" />
+      <WD Length="34" Height="15" LOffset="0" ROffset="-34" />
+    </Wall>
+    <Wall>
+      <Pos X="-18.6813" Y="21.01104" Z="1" />
+      <WD Length="14.5" Height="15" LOffset="0" ROffset="14.5" />
+    </Wall>
+    <Wall>
+      <Pos X="-24.13778" Y="-7.076225" Z="1" />
+      <WD Length="17" Height="15" LOffset="0" ROffset="17" />
+    </Wall>
+  </West>
+  <South>
+    <Wall>
+      <Pos X="-35.37804" Y="-4.335709" Z="1" />
+      <WD Length="34" Height="15" LOffset="0" ROffset="34" />
+    </Wall>
+    <Wall>
+      <Pos X="-1.322751" Y="29.55893" Z="1" />
+      <WD Length="31" Height="15" LOffset="0" ROffset="-31" />
+    </Wall>
+  </South>
+</Root>

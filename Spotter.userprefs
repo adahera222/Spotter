@@ -1,6 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\WallsBuilderEditor.cs">
+    <Files>
+      <File FileName="Assets\Scripts\WallsBuilder.cs" Line="162" Column="5" />
+      <File FileName="Assets\Editor\WallsBuilderEditor.cs" Line="64" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
