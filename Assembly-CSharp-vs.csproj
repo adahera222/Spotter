@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\IsoWall.cs" />
      <Compile Include="Assets\Scripts\Sprite.cs" />
      <Compile Include="Assets\Scripts\WallsBuilder.cs" />
+     <Compile Include="Assets\Scripts\WallsManager.cs" />
      <None Include="Assets\Maps\SimpleMap.xml" />
      <None Include="Assets\Maps\SimpleWalls.xml" />
      <None Include="Assets\Maps\PrototypeMap.xml" />

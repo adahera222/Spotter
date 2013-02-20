@@ -1,12 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\IsoWall.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Sprite.cs">
     <Files>
       <File FileName="Assets\Scripts\GridBuilder.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WallsBuilder.cs" Line="59" Column="37" />
-      <File FileName="Assets\Editor\WallsBuilderEditor.cs" Line="15" Column="46" />
-      <File FileName="Assets\Scripts\GridManager.cs" Line="153" Column="24" />
-      <File FileName="Assets\Scripts\IsoWall.cs" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\WallsBuilder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GridManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\IsoWall.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Sprite.cs" Line="52" Column="54" />
+      <File FileName="Assets\Editor\WallsBuilderEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Editor\SpriteEditor.cs" Line="20" Column="15" />
+      <File FileName="Assets\Editor\IsoWallEditor.cs" Line="8" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
