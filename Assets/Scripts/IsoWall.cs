@@ -38,7 +38,7 @@ public class IsoWall : MonoBehaviour
 	//==============================================
 	public void Rebuild()
 	{
-	
+		
 		MeshFilter meshFilter = GetComponent<MeshFilter>();
 		if(meshFilter == null)
 		{

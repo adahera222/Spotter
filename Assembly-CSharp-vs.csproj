@@ -44,14 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\GridBuilder.cs" />
-     <Compile Include="Assets\Scripts\GridData.cs" />
-     <Compile Include="Assets\Scripts\GridManager.cs" />
+     <Compile Include="Assets\Scripts\HGridSprite.cs" />
+     <Compile Include="Assets\Scripts\HLayer.cs" />
+     <Compile Include="Assets\Scripts\HSprite.cs" />
      <Compile Include="Assets\Scripts\IsoWall.cs" />
-     <Compile Include="Assets\Scripts\Sprite.cs" />
-     <Compile Include="Assets\Scripts\WallsBuilder.cs" />
-     <Compile Include="Assets\Scripts\WallsManager.cs" />
+     <Compile Include="Assets\Scripts\MapManager.cs" />
      <None Include="Assets\Maps\SimpleMap.xml" />
+     <None Include="Assets\Shaders\GridShader.shader" />
      <None Include="Assets\Maps\SimpleWalls.xml" />
      <None Include="Assets\Maps\PrototypeMap.xml" />
      <None Include="Assets\Maps\TestWalls.xml" />
