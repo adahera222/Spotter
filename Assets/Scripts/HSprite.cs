@@ -14,11 +14,19 @@ public class HSprite : MonoBehaviour
 	public float m_Height = 1.0f;
 	
 	//List to hold mesh data
+	[HideInInspector]
+	[SerializeField]
 	protected List<Vector3> vertList = new List<Vector3>();
+	[HideInInspector]
+	[SerializeField]
 	protected List<Vector2> uvList = new List<Vector2>();
+	[HideInInspector]
+	[SerializeField]
 	protected List<int> triList = new List<int>();
-	
-	private Mesh m_Mesh = null;
+	//Grid mesh object
+	[HideInInspector]
+	[SerializeField]
+	protected Mesh m_Mesh = null;
 	
 	//======================================
 	// Use this for initialization

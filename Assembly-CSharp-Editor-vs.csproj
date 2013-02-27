@@ -49,6 +49,7 @@
      <Compile Include="Assets\Editor\HSpriteEditor.cs" />
      <Compile Include="Assets\Editor\IsoWallEditor.cs" />
      <Compile Include="Assets\Editor\MapEditor.cs" />
+     <Compile Include="Assets\Editor\TestEditor.cs" />
      <None Include="Assets\Maps\SimpleMap.xml" />
      <None Include="Assets\Shaders\GridShader.shader" />
      <None Include="Assets\Maps\SimpleWalls.xml" />
