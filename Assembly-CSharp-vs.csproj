@@ -46,11 +46,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\HGridSprite.cs" />
      <Compile Include="Assets\Scripts\HLayer.cs" />
-     <Compile Include="Assets\Scripts\HMapClient.cs" />
+     <Compile Include="Assets\Scripts\HSimpleSprite.cs" />
      <Compile Include="Assets\Scripts\HSprite.cs" />
      <Compile Include="Assets\Scripts\IsoWall.cs" />
+     <Compile Include="Assets\Scripts\MapClient.cs" />
      <Compile Include="Assets\Scripts\MapManager.cs" />
-     <Compile Include="Assets\Scripts\TestColor.cs" />
      <Compile Include="Assets\Scripts\TestDepthScript.cs" />
      <None Include="Assets\Maps\SimpleMap.xml" />
      <None Include="Assets\Shaders\GridShader.shader" />

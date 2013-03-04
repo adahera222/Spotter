@@ -5,8 +5,9 @@ using System.Collections.Generic;
 
 public enum DepthLayer
 {
-	Background = 5,
-	Map = 4,
+	Background = 6,
+	Map = 5,
+	GridEffects = 4,
 	Actor = 3,
 	Effects = 1,
 	Default = 0,

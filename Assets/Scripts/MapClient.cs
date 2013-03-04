@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class HMapClient : MonoBehaviour
+public class MapClient : MonoBehaviour
 {
 	
 	//==================================

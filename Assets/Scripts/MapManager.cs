@@ -3,19 +3,36 @@ using System.Collections;
 using System.Collections.Generic;
 
 [ExecuteInEditMode]
+
+public enum MapOrientation
+{
+	Default = 0,
+	NorthEast = -45,
+	NorthWest = 45,
+	SouthEast = -135,
+	SouhtWest = 135,
+}
+
 public class MapManager : MonoBehaviour 
 {
 	public int m_MapWidth = 0;
 	public int m_MapHeight = 0;
 	public float m_GridWidth = 0.1f;
-	
+
+	public MapOrientation m_MapOrientation = MapOrientation.Default;
+	private MapOrientation m_MapCurrentOrientation = MapOrientation.Default;
+
 	private int m_CellSize = 1;
 	private float m_DepthOffset = -0.02f;
 	private Vector3 m_Origin = new Vector3(0.0f, 0.0f, 0.0f);
-	//List of all grid positions and z offset
+	//List of all grid positions and z offset used for point detection
 	[HideInInspector]
 	[SerializeField]
-	private List<Vector3> m_GridList = new List<Vector3>();
+	private List<Vector3> m_GridPos = new List<Vector3>();
+	//List of all grid positions and z offset rotated with map
+	[HideInInspector]
+	[SerializeField]
+	private List<Vector3> m_GridPosRotated = new List<Vector3>();
 	
 	//Z Depth/Layer of grid
 	public DepthLayer m_MapDepthLayer = DepthLayer.Map;
@@ -39,6 +56,7 @@ public class MapManager : MonoBehaviour
 	void Start ()
 	{
 		//RotateMap(-45.0f);
+		
 	}
 	
 	//===================================
@@ -46,7 +64,16 @@ public class MapManager : MonoBehaviour
 	//===================================
 	void Update () 
 	{
-	
+		if(m_MapCurrentOrientation != m_MapOrientation)
+		{
+			//Reove old rotation
+			int temp = -((int)m_MapCurrentOrientation);
+			RotateMap(temp);
+			m_MapCurrentOrientation = m_MapOrientation;
+			//Rotate to new position
+			temp = (int)m_MapCurrentOrientation;
+			RotateMap(temp);
+		}
 	}
 	
 	//=====================================
@@ -94,6 +121,7 @@ public class MapManager : MonoBehaviour
 		mapGrid.m_Width = m_MapWidth;
 		mapGrid.m_Height = m_MapHeight;
 		mapGrid.m_GridWidth = m_GridWidth;
+		mapGrid.m_CellSize = m_CellSize;
 		gridLayer.SetLayer(m_MapDepthLayer);
 		gridLayer.SetDepthOffset(-0.01f);
 		
@@ -109,7 +137,8 @@ public class MapManager : MonoBehaviour
 	void CalculateGridData()
 	{
 
-		m_GridList.Clear();
+		m_GridPos.Clear();
+		m_GridPosRotated.Clear();
 			
 		float halfW = m_MapWidth / 2.0f;
 		float halfH = m_MapHeight / 2.0f;
@@ -128,7 +157,8 @@ public class MapManager : MonoBehaviour
 			{
 				float posY = y + halfCell;
 				//Add pos data
-				m_GridList.Add(new Vector3(posX, posY, posZ));
+				m_GridPos.Add(new Vector3(posX, posY, posZ));
+				m_GridPosRotated.Add(new Vector3(posX, posY, posZ));
 				posZ += m_DepthOffset;
 				
 			}
@@ -141,15 +171,23 @@ public class MapManager : MonoBehaviour
 	//==============================================
 	public Vector3 GetNearestSquare(float x, float y)
 	{
+		//Rotate point reverse of angle
+		int angle = -((int)m_MapCurrentOrientation);
+		Vector3 point = new Vector3(x, y, 0.0f);
+		Vector3 oldDir = point - m_Origin;
+		float newX = Mathf.Cos(angle*Mathf.Deg2Rad) * (oldDir.x) - Mathf.Sin(angle*Mathf.Deg2Rad) * (oldDir.y);   
+        float newY = Mathf.Sin(angle*Mathf.Deg2Rad) * (oldDir.x) + Mathf.Cos(angle*Mathf.Deg2Rad) * (oldDir.y);     
+		
+		//Check if point intersects grid
 		float halfCell = m_CellSize / 2.0f;
 		//Simple iterate through list find grid cell object overlaps
-		for (int i=0; i<m_GridList.Count; i++)
+		for (int i=0; i<m_GridPos.Count; i++)
 		{
-			Vector3 gridPos = m_GridList[i];
-			if(x>(gridPos.x - halfCell) && x<(gridPos.x + halfCell))
+			Vector3 gridPos = m_GridPos[i];
+			if(newX>(gridPos.x - halfCell) && newX<(gridPos.x + halfCell))
 			{
-				if(y>(gridPos.y - halfCell) && y<(gridPos.y + halfCell))
-					return gridPos;
+				if(newY>(gridPos.y - halfCell) && newY<(gridPos.y + halfCell))
+					return  m_GridPosRotated[i];
 			}
 		}
 		
@@ -161,14 +199,15 @@ public class MapManager : MonoBehaviour
 	//===============================================
 	public void RotateMap(float angle)
 	{
+		
 		//Rotate Grid Coordinates
-		for(int i=0; i < m_GridList.Count; i++)
+		for(int i=0; i < m_GridPosRotated.Count; i++)
 		{
-			Vector3 oldDir = m_GridList[i] - m_Origin;
+			Vector3 oldDir = m_GridPosRotated[i] - m_Origin;
 			float newX = Mathf.Cos(angle*Mathf.Deg2Rad) * (oldDir.x) - Mathf.Sin(angle*Mathf.Deg2Rad) * (oldDir.y);   
         	float newY = Mathf.Sin(angle*Mathf.Deg2Rad) * (oldDir.x) + Mathf.Cos(angle*Mathf.Deg2Rad) * (oldDir.y);     
       		float newZ = oldDir.z; 
-			m_GridList[i] = new Vector3(newX, newY, newZ);
+			m_GridPosRotated[i] = new Vector3(newX, newY, newZ);
 		}
 		
 		//Rotate map sprite

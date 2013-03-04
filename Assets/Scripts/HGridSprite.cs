@@ -14,7 +14,7 @@ public class HGridSprite : HSprite
 	//Main color of grid
 	public Color m_MainColor = Color.grey;
 	//Each grid square size
-	private float m_CellSize = 1.0f;
+	public float m_CellSize = 1.0f;
 	//Midpoint of grid is origin
 	private Vector3 m_MidPoint = new Vector3(0.0f, 0.0f, 0.0f);
 	//List to contain vertex colors
